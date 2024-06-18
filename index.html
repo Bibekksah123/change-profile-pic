@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .profile{
+      height:100px;
+      width: 100px;
+    border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="card">
+      <h1>bibek sah</h1>
+      <p>@bibeksah</p>
+      <img src="image/profile.png" alt="" class="profile">
+      <label for="inpute-image">update the image</label>
+      <input type="file" accept="image" id="inpute-image">
+    </div>
+  </div>
+  <script>
+    let image=document.querySelector('.profile');
+    let inpute=document.querySelector('#inpute-image');
+    inpute.onchange=function (){
+      image.src=URL.createObjectURL(inpute.files[0]);
+    }
+  </script>
+</body>
+</html>
